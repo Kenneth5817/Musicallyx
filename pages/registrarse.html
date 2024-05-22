@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es" dir="1tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulario Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <script src="../js/app.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <nav id="nav">
+            <article id="logo">
+                <img src="../images/logo/logo.png" alt="">
+            </article>
+
+            <article id="column-2">
+                <article id="arriba">
+                    <article>
+                        <header>
+                            <h1>Musicallyx</h1>
+                        </header>
+                        <form>
+                            <button><i class="ri-search-line"></i></button>
+                            <input type="text" placeholder="Buscar...">
+                        </form>
+                        <div id="nav-toggle">
+                            <i class="ri-menu-line nav__burger"></i>
+                            <i class="ri-close-line nav__cerrar"></i>
+                        </div>
+                    </article>
+                    <nav>
+                        <i class="ri-shopping-cart-line"></i>
+                        <a href="pages/iniciarSesion.html"><i class="ri-user-line"></i></a>
+                    </nav>
+                </article>
+
+                <!--=============== NAV MENU ===============-->
+                <nav id="nav-menu">
+                    <ul id="nav-list">
+                        <li><a href="../index.html" id="nav-link">Inicio</a></li>
+
+                        <!--=============== DESPLEGABLE ===============-->
+                        <li id="dropdown-item">
+                            <div id="nav-link">
+                                Próximos eventos <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+
+                            <ul id="dropdown-menu">
+                                <li>
+                                    <a href="#" id="dropdown-link">
+                                        Coldplay
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" id="dropdown-link">
+                                        Aitana
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" id="dropdown-link">
+                                        Camilo
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#" id="nav-link">Tienda</a></li>
+
+                        <li><a href="#" id="nav-link">¿Quiénes somos?</a></li>
+
+                        <li><a href="#" id="nav-link">Contacto</a></li>
+
+                    </ul>
+                    <a href="#" id="idiomas"><img src="../images/idiomas.png" alt=""></a>
+                </nav>
+            </article>
+        </nav>
+    </header>
+
+    <!-- Formulario Validación-->
+    <form class="form" id="form-registro" novalidate>
+        <h5>REGISTRARSE</h5>
+        <input type="email" class="controls" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email"
+            value="" placeholder="Introduce un email" required>
+        <input type="password" class="controls" id="contraseña1"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])(?!\s)[a-zA-Z\d#$@!%&*?]{8,16}$" name="contraseña"
+            value="" placeholder="Crea una contraseña" required>
+        <span class="noValido">Constraseña no válida. Necesita al menos introducir de 8 a 16 caracteres. Entre ellos, al
+            menos de 2 a 4 mayúsculas, minúsculas, caracteres especiales y números</span>
+        <input type="password" class="controls" id="contraseña2"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])(?!\s)[a-zA-Z\d#$@!%&*?]{8,16}$" name="contraseña"
+            value="" placeholder="Repite la contraseña" required>
+        <input type="checkbox" id="politicaPrivacidad" required autocomplete="off"> Acepto las condiciones
+        <input type="submit" class="buttons" id="crearCuenta" value="Crear cuenta"
+            onclick="validacionjavaScript(event)">
+        <p><a href="iniciarSesion.html">¿Ya te habías registrado? ¡Inicia sesión!</a></p>
+    </form>
+
+    <!--=========== FOOTER ===========-->
+    <footer>
+        <!-- nosotros -->
+        <article id="columna-1">
+            <img src="../images/logo/logo2.png" id="logo">
+        </article>
+        <!-- sobre nosotros -->
+        <article id="columna-2">
+            <h3>SOBRE NOSOTROS</h3>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Próximos eventos</a>
+                </li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="#">¿Quiénes somos?</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </article>
+        <!-- métodos y patrocinadores -->
+        <article id="columna-3">
+            <h3>MÉTODOS DE PAGO</h3>
+            <img src="../images/metodos.jpeg" alt="metodos de pago">
+        </article>
+        <!-- patrocinadores -->
+        <article id="columna-4">
+            <h3>REDES SOCIALES</h3>
+            <img src="../images/redes-sociales/redes.png" alt="">
+        </article>
+
+
+    </footer>
+    <p id="copy">Copyright©2024 All rights reserved | Made by Kenneth Jensen</p>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>
