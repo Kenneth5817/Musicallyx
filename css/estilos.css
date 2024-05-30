@@ -182,11 +182,12 @@ a {
         overflow: auto;
         pointer-events: none;
         opacity: 0;
-        background-color: rgb(255, 255, 255);
+        background-color: #017bab;
         transition: top .4s, opacity .3s;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size:80px;
     }
 
     #nav-list {
@@ -208,6 +209,7 @@ a {
         overflow: hidden;
         transition: .4s all;
         size:80%;
+        display:none;
     }
 
     #dropdown-menu li {
@@ -292,6 +294,10 @@ a {
 
 #nav-list img {
     max-width: 80px;
+}
+
+#idiomas img{
+    display:none;
 }
 
 /* Para ordenadores */
@@ -859,7 +865,7 @@ footer #columna-2 img {
 
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1200px) {
     footer {
         grid-template-columns: 1fr 1fr;
     }
@@ -869,9 +875,11 @@ footer #columna-2 img {
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1010px) {
     footer {
         grid-template-columns: 1fr;
+        font-size: 200%;
+        text-align: center;
     }
 
     footer article:nth-child(1),
